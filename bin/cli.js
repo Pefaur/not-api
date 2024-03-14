@@ -26,7 +26,7 @@ const getArg = (key) => {
    return index >= 0 ? args[index + 1] : null
 } 
 
-const dir = getArg('-d') || getArg('-dir') || '.fake-api';     // second argument
+const dir = getArg('-d') || getArg('-dir') || '.not-api';     // second argument
 const port = getArg("-p") || getArg('-port') || 5010;
 const origin = getArg("-o") || getArg('-origin') || null;
 
@@ -78,7 +78,7 @@ const initApi = async (data, config) => {
     })
 
 
-    internalApp.get("/fake-api/config/", (req, res) => {
+    internalApp.get("/not-api/config/", (req, res) => {
         res.status(200)
         res.json({...config, 
             ...(port && { port }), 
@@ -86,7 +86,7 @@ const initApi = async (data, config) => {
         });
     });
 
-    internalApp.get("/fake-api/config/data/", (req, res) => {
+    internalApp.get("/not-api/config/data/", (req, res) => {
         res.status(200)
         res.json({
             data: data,
