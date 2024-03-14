@@ -1,22 +1,25 @@
 {
-    "uri": "/users",
+    "uri": "/v1/mipago/productos/cuentas-corrientes/saldo/:id",
     "method": "GET",
     "responses": [
         {
-            "name": "Success get users",
+            "name": "Success monto 30.000",
             "statusCode": 200,
             "delay": 200,
             "response": {
-                "users": [
-                    {
-                        "name": "John Doe",
-                        "email": "john.doe@fake-api.io"
-                    },
-                    {
-                        "name": "Bill Gate",
-                        "email": "bill.gate@fake-api.io"
-                    }
-                ]
+                "saldoDisponible":30111,
+                "montoLineaDisponible":50001,
+                "numeroCuentaLCD":"lFi-N1Rv9nIue8mCTv8RZ7csCLKvPgLkPJyqWIKWTYApQ3DqidH9vQ"
+            }
+        },
+        {
+            "name": "Success monto 145.000",
+            "statusCode": 200,
+            "delay": 200,
+            "response": {
+                "saldoDisponible":145000,
+                "montoLineaDisponible":44444,
+                "numeroCuentaLCD":"lFi-N1Rv9nIue8mCTv8RZ7csCLKvPgLkPJyqWIKWTYApQ3DqidH9vQ"
             }
         },
         {
@@ -25,6 +28,14 @@
             "delay": 100,
             "response": {
                 "users": []
+            }
+        },
+        {
+            "name": "No existe",
+            "statusCode": 404,
+            "delay": 100,
+            "response": {
+                "message": "No Existe"
             }
         },
         {

@@ -44,9 +44,14 @@ const App = () => {
               {config.description}
             </Typography>
           </Box>
-          <Typography variant="body2" color="text.secondary">
-            Port: {config.port}
-          </Typography>
+          <Box>
+            <Typography variant="body2" color="text.secondary">
+              Port: {config.port}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Origin: {config.origin || 'none'}
+            </Typography>
+          </Box>
         </Box>
         {data.length && <CardList data={{ port: config.port, api: data }} />}
       </Box>

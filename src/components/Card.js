@@ -66,8 +66,8 @@ const Card = (data) => {
                         {title}
                     </Typography>
                     <div style={{ textAlign: 'right', 'padding-right': '15px' }}>
-                        <Button onClick={(e) => copiarCURL(e, title, method, responses[0])}>Copiar CURL</Button>
-                        <Button onClick={(e) => copiarEndpoint(e, description)}>Copiar Link</Button>
+                        <Button onClick={(e) => copiarCURL(e, title, method, responses[0])}>Copy CURL</Button>
+                        <Button onClick={(e) => copiarEndpoint(e, description)}>Copy Link</Button>
                     </div>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -82,7 +82,7 @@ const Card = (data) => {
                 anchorOrigin={{ vertical: 'top', horizontal: 'right' }}      
             >
                 <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-                    ¡Copiado!
+                    Copied!
                 </Alert>
             </Snackbar>
         </>

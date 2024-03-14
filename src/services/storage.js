@@ -23,7 +23,7 @@ const getResponse = async (key) => {
     if(res){
         return JSON.parse(res);
     }
-    return { statusCode: 404, res: { message: "route not exist"} }
+    return { notExist: true, statusCode: 404, res: { message: "route not exist"} }
 };
 
 module.exports = { storageInit, udpateResponse, getResponse}
