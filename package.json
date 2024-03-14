@@ -5,7 +5,7 @@
   "license": "CC-BY-NC-4.0",
   "private": false,
   "bin": {
-    "fake-api": "bin/cli.js"
+    "not-api": "bin/cli.js"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
