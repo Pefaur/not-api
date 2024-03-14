@@ -1,0 +1,24 @@
+{
+    "uri": "/login",
+    "method": "POST",
+    "responses": [
+        {
+            "name": "Success Login",
+            "statusCode": 200,
+            "delay": 200,
+            "response": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOi",
+                "name": "John Doe"
+              }
+        },
+        {
+            "name": "Error Contraseña inválida",
+            "statusCode": 401,
+            "delay": 100,
+            "response": {
+                "code": "CO10",
+                "message": "Contraseña inválida"
+            }
+        }
+    ]
+}

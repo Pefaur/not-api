@@ -1,0 +1,40 @@
+{
+    "uri": "/users",
+    "method": "GET",
+    "responses": [
+        {
+            "name": "Success get users",
+            "statusCode": 200,
+            "delay": 200,
+            "response": {
+                "users": [
+                    {
+                        "name": "John Doe",
+                        "email": "john.doe@fake-api.io"
+                    },
+                    {
+                        "name": "Bill Gate",
+                        "email": "bill.gate@fake-api.io"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Success empty users",
+            "statusCode": 200,
+            "delay": 100,
+            "response": {
+                "users": []
+            }
+        },
+        {
+            "name": "Error get users",
+            "statusCode": 500,
+            "delay": 100,
+            "response": {
+                "code": "CO11",
+                "message": "Internal Server Error"
+            }
+        }
+    ]
+}
